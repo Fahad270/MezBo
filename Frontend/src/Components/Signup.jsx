@@ -3,7 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import app from "../firebase/firebase.js";
 import { FaFacebook } from "react-icons/fa";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
