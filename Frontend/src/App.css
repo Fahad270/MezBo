@@ -14,56 +14,63 @@ h1{
 }
 
 #navbarlholder{
-  background-color: yellow;
-  border: 2px solid lightgreen;
+  background-color: #D8C4B6;
+  border: 2px solid #D9EAFD;
   display: flex;
-  height: 50px;
+  min-height: 50px;
+  padding:10px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
 }
 .LoginBtn{
 border-radius: 20px;
-border:2px solid blue;
+border:2px solid #4335A7;
 width: 100px;
+color:#4335A7;
 margin:5px;
-background-color: lightcyan;
+background-color: #89A8B2;
 height:30px; 
 }
 
 .LandP_1{
-  min-height: 100vh;
+  min-height: 100vh;  /*Occupy 100% of the viewport height!!*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
   background-image: url("./assets/BG.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;  
 }
 .LandP_1 h2{
-  color: black;
+  color: blac;
   font-family: 'comic sans','Fantasy',cursive;
-
 }
 
 .LandP_2{
 display: flex;
 height: 600px;
 flex-wrap: wrap;
+background-color: #213555;
 align-items: center;
 justify-content: center;
 }
 
+/*What changes we did are added heigt:auto and min-height as well as width and max-width!! question arises why this pair always???? */
 #CardL{
   display: flex;
   margin: 20px;
-  width: 300px;
-  height: 200px;
+  width:100%;
+  max-width: 300px;
+  cursor: pointer;
+  height: auto;
+  min-height: 200px;
+  background-color: #D9EAFD;
   flex-direction: column;
   align-items: center;
+  box-shadow: 10px 2px 10px;
   justify-content: space-between;
   border:1px solid black;
 }
@@ -74,34 +81,398 @@ justify-content: center;
   background-size: contain;
   background-position: center;
   width: 100%;
-  height: 500px;
+  height: auto;
+  min-height: 500px;
 }
 
 
 .FHotels{
+  background-color: #213555;
   width: 100%;
   display: flex;
+  min-height: 100vh;
   flex-wrap: wrap;
-  margin: 10px;
-  justify-content: center;
+  justify-content: center; 
 }
-
+/*but why max-width and yeh width :100% of what???? */
 .HotelCard{
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 400px;
+  height: auto;
   border-radius: 15px;
+  color:#3E5879;
+  background-color: #D9EAFD;
+  box-shadow: 10px 2px 10px;
   border:1px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.description {
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.4;
+}
+.HotelCard button{
+  background-color: green;
+  width: 90%;
+  max-width: 300px;
+  height: 30px;
+  border: 1px solid lightgreen;
+  border-radius: 10px;
+}
+.LoginHolder_1{
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  justify-content: center;
+  background-color: #608BC1;
+}
+.LoginHolder{
+  margin:30px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1000px;
+  height: auto;
+  min-height: 100dvh;
+  box-shadow: 2px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border:1px solid black; 
+  display: flex;
+}
+/* ASK Why not vw and why media queries is required???onlyyyy */
+.Log1{
+  width: 50%;
+  padding: 30px;
+  border: 3px solid lavender;
+  border-radius: 20px;
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Log2 {
+  width: 50%;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px;
+  min-height: 500px;
+  background-image: url("./assets/Login.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*As soon  as screen width becomes 768 or less than that apply these!!!!!*/
+@media(max-width:768px) {
+
+  .LoginHolder {
+    flex-direction: column;
+  }
+
+  .Log1,
+  .Log2 {
+    width: 100%;
+    min-height: 250px;
+  }
+
+}
+.HolderLog{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.Input {
+  width: 100%;
+  max-width: 300px;
+  height: 40px;
+  margin: 10px;
+  margin-bottom: 30px;  
+  border-radius: 10px;
+  border: 1px transparent;
+  text-align: center; 
+}
+
+.LoginBtn_1{
+  width: 300px;
+  height: 40px;
+  background-color:mediumpurple;
+  border:1px transparent;
+  border-radius: 10px;
+}
+
+.DealNavBar{
+  display: flex;
+  height: 60px;
+  background-color: teal;
+}
+.dlrbtn {
+  margin: 10px;
+  height: 40px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.FormHolder{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+}
+
+.AddProp{
+  margin:10px;
+  width: 100%;
+  max-width: 800px;
+  height: 40px;
+  color:white;
+  border-radius: 10px;
+  background-color: teal;
+}
+
+.MyOwnership{
+  padding: 10px;
+  display: flex;
+  color:#F8FAFC;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
   justify-content: space-between;
+  min-height: 150px;
+  background-color: #9AA6B2;
+}
+
+.UserNav{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  gap:10px;
+  border:3px solid black;
+  background-color: #618764;
+}
+.AdminCardHolder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #1E293B;
+}
+
+.AdminCard{
+  background-color: #E0F2FE;
+  width: 300px;
+  margin:20px;
+  color:#334155;
+  height: 90px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  flex-direction: column;
   align-items: center;
 }
 
-.Footer{
-  height: 400px;
-  background-color: black;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url("./assets/Footer.png");
-  background-size: contain; 
+.AdminBody{
+  background-color: #0F172A;
+  height: 100vh;
+  width: 100%; 
+}
+
+.AdminTable {
+  background: #1E2B45;
+  border-radius: 15px;
+  padding: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  background: #0D1B3A;
+  color: #C7D8E6;
+  padding: 15px;
+}
+td {
+  background: #C7D8E6;
+  color: #0F172A;
+  padding: 12px;
+}
+tr:hover td {
+  background: #D8E6F2;
+}
+.admindel{
+      background: #DC2626;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 8px;
+}
+
+
+.reserveHolder {
+  background: #133E87;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.reserveCard {
+  background-color:#CBDCEB;
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reserveCard img {
+  width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.reserveCard h3 {
+  color: #1F2937;
+  margin: 10px 0;
+}
+
+.reserveCard p {
+  color: #4B5563;
+}
+.SHolder {
+  display: flex;
+  gap: 2rem;
+  margin-top: 15px;
+}
+
+.ServiceHolder {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #D1D5DB;
+  resize: none;
+  font-size: 16px;
+}
+.reserveCard button {
+  background: #F3F3E0;
+  color: black;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.reserveCard button:hover {
+  background: #6E946D;
+}
+.PropertyInfo {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #F3F4F6;
+  border-radius: 10px;
+}
+
+
+.FooterLinks {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+}
+
+.RAGHolder {
+  min-height: 100vh;
+  background-color: #213555;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.RAGHolder div {
+  width: 90%;
+  max-width: 700px;
+
+  background-color: #D9EAFD;
+
+  padding: 30px;
+
+  border-radius: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.2);
+}
+
+.RAGInput {
+  width: 100%;
+
+  padding: 15px;
+
+  border-radius: 10px;
+
+  border: 1px solid #9AA6B2;
+
+  outline: none;
+
+  font-size: 16px;
+
+  background-color: white;
+}
+
+.RAGInput:focus {
+  border: 2px solid #3E5879;
+}
+
+.RAGHolder button {
+  width: 200px;
+  align-self: center;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #3E5879;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.RAGHolder button:hover {
+  background-color: #213555;
+}
+
+
+.RAGHolder h2 {
+  text-align: center;
+  color: #213555;
+}
+
+.RAGHolder p {
+  text-align: center;
+  color: #3E5879;
 }

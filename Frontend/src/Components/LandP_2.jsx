@@ -13,7 +13,7 @@ export default function LandP_2() {
     return (
         <>
             <div style={{backgroundColor:"ghostwhite"}}>
-        <h1 style={{textAlign:"center",backgroundColor:"lightgrey",color:"blue"}}>What Makes us standout!!!</h1>
+        <h1 style={{textAlign:"center",backgroundColor:"#D8C4B6",color:"#273338"}}>What Makes us standout!!!</h1>
             <div className="LandP_2">
             
             {

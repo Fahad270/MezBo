@@ -64,7 +64,7 @@ export    default function FeaturedHotels() {
 
     return (
         <>
-            <h1 style={{textAlign:"center",backgroundColor:"lightgrey",color:"blue"}}>Featured Hotels!!</h1>
+            <h1 style={{textAlign:"center",backgroundColor:"#D8C4B6",color:"#273338"}}>Featured Hotels!!</h1>
             <div className="FHotels">
             {
                 Hotels.map((Hotel,index) => {
