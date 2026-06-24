@@ -10,7 +10,8 @@ export default function DealerPropPage() {
     const [prop, setprop] = useState([]);
     async function FetchData() {
     try {
-        const response = await axios("http://localhost:5000/prop");    
+        //const response = await axios("http://localhost:5000/prop");    
+        const response = await axios("https://mezbo.onrender.com");    
         if (response) {
             setprop(response.data);   
         } else {

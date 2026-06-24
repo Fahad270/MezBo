@@ -7,7 +7,9 @@ export default function AdminDashPage() {
     const [prop, setprop] = useState([]);
         async function FetchData() {
             try {
-                const response = await axios("http://localhost:5000/prop");    
+                //https://mezbo.onrender.com
+                // const response = await axios("http://localhost:5000/prop");    
+                const response = await axios("https://mezbo.onrender.com");
                 if (response) {
                     console.log(response.data);
                     setprop(response.data);   
@@ -25,8 +27,9 @@ export default function AdminDashPage() {
         }, []);
     
     function callDelete(id) {
-        const response = axios.delete(`http://localhost:5000/prop/${id}`);
-        }
+       //const response = axios.delete(`http://localhost:5000/prop/${id}`);
+        const response = axios.delete(`https://mezbo.onrender.com/${id}`);
+    }
         return (
             <>
             <div className="AdminBody">

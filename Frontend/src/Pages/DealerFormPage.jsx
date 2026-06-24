@@ -52,7 +52,8 @@ export default function DealerFormPage() {
             const PropertyData = { Title, Description, imageurlextr:url, Categories, Price, Location, country };
             if (Title !== "" && Description !== "" && Categories !== "" && Price !== "" && Location !== "" && country !== "" && url!=="") {    
                 clearForm();
-                const response = await axios.post("http://localhost:5000/prop", PropertyData);
+                // const response = await axios.post("http://localhost:5000/prop", PropertyData);
+                const response = await axios.post("https://mezbo.onrender.com", PropertyData);
                 if (response) {
                     console.log(response.data);
                 }

@@ -1,4 +1,6 @@
-./Backend/.env
+.env
+Backend/.env
+Frontend/.env
 
 # Logs
 logs

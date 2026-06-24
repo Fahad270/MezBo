@@ -10,7 +10,8 @@ export default function ReservedHotelPage() {
     
     //useParams() is a method that is used to retrieve the parameter provided in the path/url. like we do in backend req.params.parametername same thing in react we do using useParams() method.!!
     async function findtheog() {
-        const response = await axios.get(`http://localhost:5000/prop/${id}`);
+        //const response = await axios.get(`http://localhost:5000/prop/${id}`);
+        const response = await axios.get(`https://mezbo.onrender.com/${id}`);
         if (response) {
             setPropty(response.data);
         } else {

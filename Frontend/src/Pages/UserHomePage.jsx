@@ -9,9 +9,10 @@ export default function UserHomePage() {
     const navigate = useNavigate();
     const [prop, setprop] = useState([]);
         async function FetchData() {
-        try {
-            const response = await axios("http://localhost:5000/prop");    
-            if (response) {
+         try {
+        //     const response = await axios("http://localhost:5000/prop");    
+               const response = await axios("https://mezbo.onrender.com");    
+             if (response) {
                 console.log(response.data);
                 setprop(response.data);   
             } else {
