@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import { arrayLast } from "firebase/firestore/pipelines";
 import { useNavigate } from "react-router-dom";
 export default function RAGPage() {
     const navigate = useNavigate();
