@@ -1,9 +1,9 @@
-import { React,useState } from "react";
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import app from "../firebase/firebase.js";
 import { FaFacebook } from "react-icons/fa";
-import { getAuth, createUserWithEmailAndPassword } from "firebase";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
@@ -44,8 +44,8 @@ export default function SignUp() {
                             <h3>Welcome User, Create your new account!</h3>
                             <div className="HolderLog">
                             <input name="in1" type="text" className="Input" placeholder="Email" required onChange={(e)=>{setemail(e.target.value)}}/>
-                            <input name="in2" type="text" className="Input" placeholder="Password" required onChange={ (e)=>{setpass1(e.target.value)} } />
-                            <input type="text" name="in3" className="Input" placeholder="Re-Enter Password" required  onChange={ (e)=>{setpass2(e.target.value)} } />
+                            <input name="in2" type="password" className="Input" placeholder="Password" required onChange={ (e)=>{setpass1(e.target.value)} } />
+                            <input type="password" name="in3" className="Input" placeholder="Re-Enter Password" required  onChange={ (e)=>{setpass2(e.target.value)} } />
                             
                             <div>
                                 <p style={{ marginRight: "10px",display:"inline" }}>I want to:</p>
